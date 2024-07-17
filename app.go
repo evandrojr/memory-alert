@@ -33,7 +33,7 @@ func main() {
 			fmt.Printf("Memória disponível: %d MB\n", memAvailable)
 		}
 
-		if memAvailable < 15000 {
+		if memAvailable < 1500 {
 			notify.Notify("memory-alert", "ALERT!", "Low memory!", exeDir+"/ram.png")
 		}
 		time.Sleep(2 * time.Second)
