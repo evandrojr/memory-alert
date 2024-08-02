@@ -1,5 +1,7 @@
 # Memory Alert
 
+[![Build Linux Binary](https://github.com/evandrojr/memory-alert/actions/workflows/build-linux.yml/badge.svg)](https://github.com/evandrojr/memory-alert/actions/workflows/build-linux.yml)
+
 Este é um utilitário simples escrito em Go para monitorar a quantidade de memória disponível em um sistema Linux. Quando a memória disponível cai abaixo de um certo limite, uma notificação é enviada.
 
 ## Funcionalidades
