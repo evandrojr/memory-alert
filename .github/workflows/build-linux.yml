@@ -23,7 +23,8 @@ jobs:
 
       - name: Build
         run: |
-          go build -o memory-alert main.go
+          go mod tidy
+          go build -o memory-alert app.go
 
       - name: Upload binary
         uses: actions/upload-artifact@v3
