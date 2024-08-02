@@ -1,49 +1,50 @@
 # Memory Alert
 
-Este é um utilitário simples escrito em Go para monitorar a quantidade de memória disponível em um sistema Linux. Quando a memória disponível cai abaixo de um certo limite, uma notificação é enviada.
+[👉 Versão em português aqui](Readme.pt.md)
 
-## Funcionalidades
+This is a simple utility written in Go to monitor the amount of available memory on a Linux system. When the available memory falls below a certain threshold, a notification is sent.
 
-- Monitora a memória disponível no sistema.
-- Envia uma notificação de alerta quando a memória disponível é inferior a 1500 MB.
-- Usa o pacote `notify` para exibir notificações na área de trabalho.
+## Features
+Monitors the available memory on the system.
+Sends an alert notification when the available memory is less than 1500 MB.
 
-## Pré-requisitos
+Uses the notify package to display notifications on the desktop.
+Prerequisites
 
-- Este programa foi projetado para sistemas Linux, pois depende do arquivo `/proc/meminfo` para obter informações sobre a memória.
-- Go instalado no sistema. Você pode baixar e instalar o Go a partir de [golang.org](https://golang.org/).
+This program is designed for Linux systems, as it relies on the /proc/meminfo file to obtain memory information.
+Go installed on the system. You can download and install Go from golang.org.
 
+How to Use
+Clone the repository or download the source code to your working directory:
 
-## Como usar
-Clone o repositório ou baixe o código fonte para o seu diretório de trabalho:
-
-Copiar código
-```bash
-git clone https://github.com/seu_usuario/memory-alert.git
-cd memory-alert
 ```
-Certifique-se de que você tem uma imagem chamada ram.png no mesmo diretório onde o executável será executado. Esta imagem será usada na notificação.
 
-Compile o programa usando o comando:
+git clone https://github.com/your_user/memory-alert.git
+cd memory-alert
 
-```bash
-Copiar código
+```
+Make sure you have an image named ram.png in the same directory where the executable will be run. This image will be used in the notification.
+
+Compile the program using the command:
+
+```
 go build -o memory-alert
 ```
-Execute o programa:
 
-```bash
-Copiar código
+Run the program:
+
+```
 ./memory-alert
 ```
-Coloque o memory-alert para inicar quando seu gerenciador de janelas iniciar
 
-O programa irá monitorar a memória disponível continuamente a cada 2 segundos e exibirá uma notificação quando a memória disponível for inferior a 1500 MB.
+Set memory-alert to start when your window manager starts
 
-## Personalização
-Limite de Memória: Você pode alterar o limite de memória passando o valor por linha de comando.
+## Customization
+The program will continuously monitor the available memory every 2 seconds and will display a notification when the available memory is less than 1500 MB.
 
-Intervalo de Verificação: O intervalo entre as verificações de memória é atualmente de 2 segundos. Você pode ajustar isso alterando o valor time.Sleep(2 * time.Second) para um valor diferente.
+Memory Limit: You can change the memory limit by passing the value via the command line.
 
-## Licença
-Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
+Check Interval: The interval between memory checks is currently 2 seconds. You can adjust this by changing the value of time.Sleep(2 * time.Second) to a different value.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for more details.
